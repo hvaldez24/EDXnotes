@@ -75,6 +75,10 @@ B. Github
             iii. Check status of branches
             SYNTAXL
             git branch
+
+C. Forking
+Making your own copy of the repository in Github
+D. GitHub Pages 
             
 
 
