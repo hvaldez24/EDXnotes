@@ -1,0 +1,78 @@
+II.  GIT
+A. Uses of GIT
+    1. Uses of GIT 
+        a. command line tool that allows developers to track changes to their code
+        b. synchronize code between different people
+            i. code is stored on a repository
+            ii. changes can be made to the code, and pushed into the repository
+        c. Test changes to code without losing the original
+        d. Revert back to old versions of code.
+B. Github
+    - is a site that hosts code repository
+    1. Register to Github
+    2. Create a repository
+    3. Git Commands
+        a. git clone <url>
+        clones the repository into your computer
+        b. How to commit a code to a repositoru
+            i. git add
+            adds the file to be tracked by git
+            SYNTAX:
+            git add <file_name>
+                |   |__ the name of the file being added
+                |__ will add the file to be tracked by git
+            ii. git commit 
+            will take a snapshot of file
+            SYNTAX:
+            git commit -m "message" 
+                |       |   |__write a message
+                |       |__ will allow to add a message
+                |__ will take a snapshot of the file
+            iv. git status
+            Checking the status of the repository
+            v. git push
+            pushing all the changes to local file into repository
+            vii.  Adding multiple files
+            SYNTAX:
+            git commit -am "message"
+                        | |__ add a message
+                        |__ -a = get commit to all the files that have changed
+            viii. git pull
+            Pull the most recent changes down to local PC
+            ix. git log
+            git will provide a log of changes to a file
+            x. git reset 
+            will allow a developer to reset a previous state
+            SYNTAX:
+            git reset --hard <commit>
+                                |__ the commit hash   
+            git reset --hard origin/master
+
+        c. How to resolve "Merge Conflicts"
+        Example:
+        a=1
+        <<<<<<HEAD
+        b = 2    - your changes
+        =====
+        b = 0     - remote changes
+        >>>>> 57656c636f6d6520746f20576562    - conflicting commit
+        c = 3
+        d = 4
+        e = 5
+        Solution: 
+        remove the conflicting information, and decide on how to resolve the conflict
+
+        d. Branching
+        Allows developers to make changes on multiple features without making cnanges to 
+        master
+
+            i. creating a new branch
+            SYNTAX:
+            git checkout -b "bracnh_name"
+
+
+
+        
+            
+            
+            

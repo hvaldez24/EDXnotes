@@ -1,0 +1,572 @@
+I. HTML and CSS
+	A. HTML 
+	Boilerplate
+
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title>Hello!</title>
+		</head>
+		<body>
+		</body>
+	</html>
+		1. <head> - information that the browser can see
+		2. <body> - information that the user can see
+		3. DOM (Docuemnt Object Model) represents the structure of HTML
+			a. the html is the parent element
+			b. the child elements are head and body
+		4. common html headings / tags
+			a. h1, h2, h3 - can be used to visually organize text in html document
+			b. Lists
+				1. Ordered lists
+				Example.
+				<ol>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</ol>
+				2. Unordered list
+				<ul>
+					<li>1st Example</li>
+					<li>2nd Example</li>
+					<li>3rd Example</li>
+				</ul>
+			c. img 	- used to display an image
+					- self closing tag
+				Example attributes
+					<img src="cat.jpg" alt="CAT" width="300">
+					src - used to refer to the image, you can use urls to refer to an image as well
+					alt - can be used if the image cannot be displayed.
+					width - controls the size of the image
+			d. a - used to add a link to another website
+				Syntax:
+				<a href="https://www.google.com">Google</a>
+				Attributes:
+					href - used to link to the web site and other html pages
+			e. tables
+				Syntax:
+					<table>
+						<thead>
+							<tr>
+								<th>Ocean</th>
+								<th>Avg Depth</th>
+								<th>Max Depth</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Pacific Ocean</td>
+								<td>4,000 m</td>
+								<td>10,000 m</td>
+							</tr>
+							<tr>
+								<td>Atlantic Ocean</td>
+								<td>4,000 m</td>
+								<td>10,000 m</td>
+							</tr>
+						</tbody>
+					</table>
+
+				Elements
+					thead - designates the header of the table
+					tbody - designates the body of the table where content can be inserted.
+					tr - assigns content into a row
+			f. form
+				Syntax:
+
+					<form>
+						<input type="text" placeholder="Full Name" name="name">
+						<input type="submit">
+					</form>
+
+				Atttributes
+					type - determines the type of user input
+						text - adds blank field for user text input
+							placeholder - text to assign the blank field a placeholder text
+							name = designate a name for the form
+						submit - adds a submit button for the form
+							<input type="submit">
+						radio - adds button type input
+							Example:
+							<input name="color" type="radio" value="red">Red
+						datalist
+						<input name="country" list="countries" placeholder="Country">
+						<datalist id="countries">
+							<option value="Afghanistan">
+							<option value="etc">
+
+		5. Properties can be assigned to elements in HTML - this is called in-line styling
+			Example
+			<h1 style="color: blue; text-align: center;">Welcome to My Webpage</h1>
+				style - assigns a property like color and text properties.
+
+
+B. CSS
+	-used to style the HTML page
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title>Hello!</title>
+			#style element can be added to add CSS code
+			<style>
+				h1 {
+					color: blue;
+					text-align: center;
+				}
+			</style>
+		</head>
+		<body>
+			#moving the css properties to a separate style element is useful in avoiding redundancy
+			<h1 style="color: blue; text-align: center;">Welcome to my Webpage!</h1>
+			<h1 style="color: blue; text-align: center;">This is a second heading</h1>
+		</body>
+	</html>
+
+	-moving the css code into a style sheet, and link it to the  html file. This can be accomplished by using the link tag
+		Syntax:
+			<link rel="stylesheet" href="css_filename">
+		Example:
+			<link rel="stylesheet" href="styles.css">
+
+	1. CSS Properties
+		a. div 
+
+		<!DOCTYPE html> 
+		</html>
+			<head>
+				<title>Size</title>
+				<style>
+					div {
+						background-color: blue;
+						width: 100px;  #sets width to 100 px
+						height: 400px; #sets width to 400px
+						padding: 20px; #sets the padding to 20px
+						margin: 20px; #sets margin to px
+					}
+				</style>
+			</head>
+			<body>
+				<div>
+					Hello, World!
+				</div>
+			</body>
+		</html>
+
+		b. font properties
+			<!DOCTYPE html>
+			<html>
+				<head>
+					<style>
+						div {
+							border: 3px solid black;
+							font-family: Arial, Sans-serif; #designates the font type to Arial and San-Serif
+							font-size: 28px; #set the font size to 28px
+							font-weight: bold; #sets the font weight to bold
+						}
+					</style>
+				</head>
+				<body>
+					<div>
+						Hello, World
+					</div>
+					Some more text. font properties will not apply to text outside the div
+
+				</body>
+				</html>
+
+		c. Multiple style selectors 
+			to select multiple selectors, and add similar styles to them
+			i. Syntax:
+				td, th {
+					border: 1px solid black;
+				}
+			
+
+			Example: 
+				<!DOCTYPE html>
+				<html>
+					<head>
+						<style>
+							table {
+								border: 1px solid black; /*Designates the border with 1px solid balck line. */
+								border-collapse: collapse; /*collapses border in css*/
+							}
+							/* uses both selector to assign similar css properties*/
+							td, th {
+								border: 1px solid black;
+							}
+						</style>
+					</head>
+					<body>
+						<table>
+						<thead>
+							<tr>
+								<th>Ocean</th>
+								<th>Avg Depth</th>
+								<th>Max Depth</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Pacific Ocean</td>
+								<td>4,000 m</td>
+								<td>10,000 m</td>
+							</tr>
+							<tr>
+								<td>Atlantic Ocean</td>
+								<td>4,000 m</td>
+								<td>10,000 m</td>
+							</tr>
+						</tbody>
+					</table>
+					</body>
+				</html>
+
+			ii. Styling select headings
+			<!DOCTYPE html> 
+			<html>
+				<head>
+					<title>Hello!</title>
+					<style>
+						/*adding the # before the id will apply the property on that specific id*/
+						#foo {
+						color: blue;
+						}
+						/*a property can be assigned to a class by using a . before a class*/
+						.baz {
+							color: green;
+						}
+
+					</style>			
+				</head>
+					<body>
+						<!--assigning an id(A unique identifier) to identify one element-->
+						<h1 id="foo">Heading 1</h1> 
+						<!--a class is used to identify on or more elements-->
+						<h1 class="baz">Heading 2</h1>
+						<h1 class="baz">Heading 3</h1>
+					</body>
+			</html>
+
+			iii. Specificity
+			Order of preference for an element
+				Inline 
+				Id
+				class
+				type
+
+			Example: 
+			#html
+			<div id="foo">
+				Hello!
+			</div>
+			#css
+			div {
+				color: blue;
+			}
+			#foo {
+				color: red;
+			}
+			/* Since the id selector #foo has higher specificity, the property will take precedence over the element div.*/
+
+			iv. Other CSS Selectors
+			a, b  = Multiple element selector
+			a b 	= Descendant selector
+				
+			a > b 	= Child Selector
+				Example of child selector and descendant selector
+					<!DOCTYPE html>
+					<html>
+						<head>
+							<title>Hello!</title>
+							<style>
+								/*Child selector is notated by a greater than symbol.Matches all elements which are child pof a specified element*/
+								ul > li {
+									color: blue;
+								}
+								/*Descendant selector is used to select all the elements that are a child of the element*/
+								ul li {
+									color: blue;
+								}
+							</style>
+						</head>
+						<body>
+							<ol>
+								<li>list item one</li>
+								<li>list item two</li>
+								<ul>
+									<li>sublist item one</li>
+									<li>sublist item two</li>
+								</ul>
+								<li>list item three</li>
+							</ol>
+
+						</body>
+					</html>
+ 
+
+			a + b  	= Adjacent Sibling Selector
+			[a=b]	= Attribute Selector
+				Example:
+				<!DOCTYPE html>
+				<html lang="en">
+					<head>
+						<title>Hello!</title>
+						<style>
+							a {
+								color: blue;
+							}
+							/* The attribute selector selects the attribute within the element
+							SYNTAX:
+							element [attribute] {
+								property
+							}*/
+							a[href="https://www.facebook.com"] {
+								color: red;
+							}
+						</style>
+					</head>
+					<body>
+						<ul>
+							<li><a href="https://www.google.com">Google</a></li>
+							<li><a href="https://www.facebook.com">Facebook</a></li>
+							<li><a href="https://www.amazon.com">Amazon</a></li>
+						</ul>
+					</body>
+				</html>
+			a:b   	= Pseudoclass Selector
+					Syntax: 
+						selector:pseudo-class {
+  							property: value;
+						}
+					Example:
+						<!DOCTYPE html>
+						<html lang="en">
+							<head>
+								<title>Hello!</title>
+								<style>
+									button {
+										width: 200px;
+										height: 50px;
+										font-size: 24px;
+										background-color: green;
+									}
+									#pseudoclass hover 
+									button:hover {
+										background-color: orange;
+									}
+								</style>
+							</head>
+							<body>
+								<button>Click Me!</button>
+							</body>
+						</html>
+			a::b 	= Pseudoelement Selector
+
+C. Responsive Design
+1. Viewport
+Add to the header to adjust width
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+2. Media Control
+Example:
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title>Hello!</title>
+			<style>
+				/*adjusts the background color of the page depending on the screen size*/
+				@media (min-width: 600px) {
+					body {
+						background-color: red;
+					}
+				}
+				@media (max-width: 599px) {
+					body {
+						background-color: blue;
+					}
+				}
+			</style>
+		</head>
+		<body>
+			<h1>Welcome to My Web Page!</h1>
+		</body>
+	</html>
+3. Flexbox
+	Example:
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title>Hello!</title>
+			<style>
+				/*the wrap property will move the text that does not fit onto the next line*/
+				#container {
+					display: flex;
+					flex-wrap: wrap;
+				}
+				/*selects all divs in the container id*/
+				#container > div {
+					background-color: springgreen;
+					font-size: 20px;
+					margin: 20px;
+					padding: 20px;
+					width: 200px;
+				}
+			</style>
+		</head>
+		<body>
+			<div id="container">
+				<div>1. This is some sample text inside of a div to demo flexbox</div>
+				<div>2. This is some sample text inside of a div to demo flexbox</div>
+				<div>3. This is some sample text inside of a div to demo flexbox</div>
+				<div>4. This is some sample text inside of a div to demo flexbox</div>
+				<div>5. This is some sample text inside of a div to demo flexbox</div>
+				<div>6. This is some sample text inside of a div to demo flexbox</div>
+				<div>7. This is some sample text inside of a div to demo flexbox</div>
+				<div>8. This is some sample text inside of a div to demo flexbox</div>
+				<div>9. This is some sample text inside of a div to demo flexbox</div>
+				<div>10. This is some sample text inside of a div to demo flexbox</div>
+				<div>11. This is some sample text inside of a div to demo flexbox</div>
+				<div>12. This is some sample text inside of a div to demo flexbox</div>
+			</div>
+		</body>
+	</html>
+4. Grid Layout
+	Example:
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title>Hello!</title>
+			<style>
+				/*Grid layout for CSS*/
+				/*very Important*/
+				#grid {
+					background-color: green;
+					display: grid;
+					padding: 20px;
+					/*specifies the gap between the columns of the elements*/
+					grid-column-gap: 20px;
+					/*specifies the gap between the rows of the elements*/
+					grid-row-gap: 10px;
+					/*specifies the width of the temolate columns*/
+					grid-template-columns: 200px 200px auto;
+				}
+				.grid-item {
+					background-color: white;
+					font-size: 20px;
+					padding: 20px;
+					text-align: center;
+				}
+			</style>
+		</head>
+		<body>
+			<div id="grid">
+				<div class="grid-item">1</div>
+				<div class="grid-item">2</div>
+				<div class="grid-item">3</div>
+				<div class="grid-item">4</div>
+				<div class="grid-item">5</div>
+				<div class="grid-item">6</div>
+				<div class="grid-item">7</div>
+				<div class="grid-item">8</div>
+				<div class="grid-item">9</div>
+				<div class="grid-item">10</div>
+				<div class="grid-item">11</div>
+				<div class="grid-item">12</div>
+			</div>
+
+		</body>
+	</html>
+5. Bootstrap
+is a framework used to create web layouts with ease
+To use boot strap copy and paste the link to your head element.
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+Example:
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title>Hello!</title>
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+		</head>
+		<body>
+			Hello, world!
+			/*you can use premade components from bootstrap to craete websites much quicker*/
+			<div class="alert alert-primary" role="alert">
+			  A simple primary alert—check it out!
+			</div>
+		</body>
+	</html>
+6. How to deal with other types of redundancies
+SCSS
+You can assign variables a value, and you can call that variable without repeating 
+properties in CSS
+Web browsers do not understand SCSS by default
+Install SASS Compiler in Visual Studio code
+
+SASS Features
+	i. Using variables to assign properties
+		Syntax:
+		$color: green;
+
+		ul {
+			font-size: 14px;
+			color: $color;
+		}
+		ol {
+			font-size: 18px;
+			color: $color;
+		}
+	ii. Nesting selectors in SASS
+		Example:
+		div {
+			font-size: 18px;
+
+			p {
+				color: blue;
+			}
+			ul {
+				color: green;
+			}
+		}
+	iii. Inheritance 
+	Example:
+	%message {
+		font-family: sans-serif;
+		font-size: 18px;
+		font-weight: bold;
+		border: 1px solid black;
+		padding: 20px;
+		margin: 20px;
+	}
+
+	.success {
+		@extend %message;
+		background-color: green;
+	}
+	.warning {
+		@extend %message;
+		background-color: orange;
+	}
+	.error {
+		@extend %message;
+		background-color: red;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+
+
+
+
+
