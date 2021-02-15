@@ -68,7 +68,14 @@ B. Github
 
             i. creating a new branch
             SYNTAX:
-            git checkout -b "bracnh_name"
+            git checkout -b "branch_name"
+            ii. switching between branches
+            SYNTAX: 
+            git checkout "branch_name"
+            iii. Check status of branches
+            SYNTAXL
+            git branch
+            
 
 
 
