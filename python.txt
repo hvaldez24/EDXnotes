@@ -1,3 +1,55 @@
 III. PYTHON
 A. What is Python?
-    1. 
+    1. Powerful and quick language
+    2. Has built in feature
+B. First Program
+SYNTAX:
+print("Hello, World!")
+prints a line of text inside the parentheses
+
+C. VARIABLES
+You do not have to specify the types of variables beign defined in PYTHON
+Example:
+    a = 25   - integer  int
+    b = 1.5     - float float
+    c = "Hello!"    - string str
+    d = True        - boolean bool
+    e = None        - NoneType None
+D. Input function
+    The function allows the user to type in an Input
+    SYNTAX:
+    input("Name: ")
+    Example 1:
+    name = input("Name: ") #Requires user input, and saved in the varialbe "name"
+    print("Hello, " + name) #Prints the concantenated output of Hello and name
+
+    Example 2: 
+    print(f"Hello, {name}") #Prints the concantenated output of Hello and name
+                    |__ Plugging the value of the variable
+
+E.  Conditional Statements
+    Example:
+    n = input("Number: ")
+    #Indetations is required in python to differentiate a statement from other parts of an if statement
+    if n > 0:
+        print("n is positive")
+    elif n < 0
+    print("n is negative")
+    else:
+    print("n is zero")
+
+    If the code is run this message will appear:
+    Number: 1
+    Traceback (most recent call last):
+    File "conditions.py", line 3, in <module>
+        if n > 0:
+    TypeError: '>' not supported between instances of 'str' and 'int'
+
+    To resolved the error:
+    By passing the value if input("Name: ") to an int, the value is converted
+    to an integer:
+    Example:
+    n = int(input("Number: ")) 
+    #converts the number typed in by user into a int
+
+    
