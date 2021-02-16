@@ -75,6 +75,9 @@ B. Github
             iii. Check status of branches
             SYNTAXL
             git branch
+            iv. Merging changes from a branch back to master
+            SYNTAX:
+            git merge "branch_name"
 
 C. Forking
 Making your own copy of the repository in Github
