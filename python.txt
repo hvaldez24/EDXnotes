@@ -52,5 +52,11 @@ E.  Conditional Statements
     n = int(input("Number: ")) 
     #converts the number typed in by user into a int
 
-F.  
+F.  Sequences
     
+    SYNTAX:
+    variable = "value"
+
+    print(variable][0])
+    |               |__ will obtain the the 1st element of a string which is 0
+    |__ Will print the value of the 1st element of the variable  
