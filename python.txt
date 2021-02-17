@@ -52,4 +52,5 @@ E.  Conditional Statements
     n = int(input("Number: ")) 
     #converts the number typed in by user into a int
 
+F.  
     
