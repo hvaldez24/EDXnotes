@@ -54,9 +54,37 @@ E.  Conditional Statements
 
 F.  Sequences
     
-    SYNTAX:
+    1. SYNTAX:
     variable = "value"
 
     print(variable][0])
     |               |__ will obtain the the 1st element of a string which is 0
     |__ Will print the value of the 1st element of the variable  
+
+    Example: 
+    
+    name = "Harry"
+
+    print(name[1])
+
+    Print:
+    H
+    
+    2. Python List
+    SYNTAX
+    
+    variable = ["x", "y", "z"]
+
+    function(variable[0])
+                      |__ will obtain and index of the list
+
+    Example:
+
+    names = ["Harry", "Ron", "Hermione"]
+
+    print(names[0])
+
+    3. Tupple
+    SYNTAX
+    
+    variable = (x, y)
