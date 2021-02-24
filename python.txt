@@ -69,22 +69,54 @@ F.  Sequences
 
     Print:
     H
-    
-    2. Python List
-    SYNTAX
-    
-    variable = ["x", "y", "z"]
+    2. Data Structures
 
-    function(variable[0])
-                      |__ will obtain and index of the list
+        a. List
+        A sequence of mutable values
+        SYNTAX
+        
+        variable = ["x", "y", "z"]
 
-    Example:
+        function(variable[0])
+                        |__ will obtain and index of the list
+        *Lists use square brackets
+        Example:
 
-    names = ["Harry", "Ron", "Hermione"]
+        names = ["Harry", "Ron", "Hermione"]
 
-    print(names[0])
+        print(names[0])
 
-    3. Tupple
-    SYNTAX
-    
-    variable = (x, y)
+            i. Adding a new entry to the list
+            SYNTAX:
+            variable.append
+                        |___ Adds a new entry to the list
+            ii. Sorting the entries on a list
+            SYNTAX:
+            variable.sort()
+                        |__ sorts the entries on a list into
+                        alphabetical order.
+
+        b. Tuple
+        A sequence of immutable values, or values that cannot be changed.
+        Grouping values together in one variable
+        tupple use a parentheses
+        SYNTAX:
+        
+        variable = (x, y)
+
+        Example: 
+        coordinateX = 10.0
+        coordinateY = 20.0
+
+        coordinate = (10.0, 20.0)
+
+        c. set
+        A collection of unique values
+        data is not kept in a particular order
+
+        d. dict
+        a data structure that is a collection of key-value pairs
+
+
+
+
