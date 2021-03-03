@@ -69,7 +69,7 @@ F.  Sequences
 
     Print:
     H
-    2. Data Structures
+    2. Data Structures / Features
 
         a. List
         A sequence of mutable values
@@ -109,14 +109,113 @@ F.  Sequences
         coordinateY = 20.0
 
         coordinate = (10.0, 20.0)
+        c. list
+        Organizes the values inside a variable into a list
+
+        SYNTAX:
+        variable = ["value_1", "value_2", "value_3", "value_4"]
+
+        Example
+
+        # Define a list of names
+        names =  ["Harry" , "Ron", "Hermione", "Ginny"]
+
+        names.append("Draco") # add an entry to the list 
+
+        names.sort() # sort the list names alphabetically
+
+        print(names)
+
+        Output:
+
+        ['Draco', 'Ginny', 'Harry', 'Hermione', 'Ron']
 
         c. set
         A collection of unique values
         data is not kept in a particular order
+        Example:
+        # Create an empty set
+        s = set()
+
+        # Add elements to a set
+        s.add(1)
+        s.add(2)
+        s.add(3)
+        s.add(4)
+
+        s.remove(2)
+
+        print(s)
+
+        print(f"the set has {len(s)} elements") # WIll print the number of elements in the set
+        # SYNTAX:
+        # print(f"string element{len(variable)}")
+
+        Output: 
+        {1, 2, 3}
+        the set has 3 elements
+
+        # no repeated elements appear on the set.
+        
+
 
         d. dict
         a data structure that is a collection of key-value pairs
 
+        e. Loops
+            
+            i. for Loops
+            SYNTAX: 
+            for i variable[n1, n2, n3, n4, n5] #prints a sequence of numbers 1- 5
+            Example:
+            for i in [0, 1, 2, 3, 4, 5]
+            print(i)
+
+            Output:
+            0
+            1
+            2
+            3
+            4
+            5
+
+            Example 2:
+            # Uses range function to generate sequence of numbers
+            for  i in range(6):
+                print(i)
+            
+            Output:
+            0
+            1
+            2
+            3
+            4
+            5
+
+            Example 3:
+            #printing from a list of names
+            names = ["Harry", "Hermione", "Ron"]
+
+            for name in names:
+                print(name)
+            Output:
+
+            Harry
+            Hermione
+            Ron
+
+            Example 4:
+            name = "Harry"
+
+            for character in name:
+            print(character)
+            
+            Output:
+            H
+            a
+            r
+            r
+            y
 
 
 
