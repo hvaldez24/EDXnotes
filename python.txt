@@ -205,10 +205,11 @@ F.  Sequences
             Ron
 
             Example 4:
+            # prints the 
             name = "Harry"
-
+            
             for character in name:
-            print(character)
+                print(character)
             
             Output:
             H
@@ -216,6 +217,103 @@ F.  Sequences
             r
             r
             y
+        
+        f. Dictionaries
+
+            # creating a new dictionary
+
+            Example:
+            houses = {"Harry": "Gryffindor", "Draco": "Slytherin"}
+
+            houses["Hermione"] = "Gryffindor" # adds assigns the Hermione to Gryffindor
+
+            print(houses["Harry"])
+                #the square brackets is used to look up a specific element in a dictionary
+
+        g. Functions
+
+            i. how to define a Function
+            SYNTAX:
+
+            def square(x): # defines the function
+            return x * x
+
+            for i in range(10):
+            print(f"The square of {i} is {square(i)}") #multiplies the i variable by itself for 10 times
+
+            ii. how to import Functions
+            SYNTAX:
+            from functions import square
+            #file from  squares.py
+                for i in range(10):
+                    print(f"The square of {i} is {square(i)}")
+                    #running this function ny itself will results in an Exception:
+                    #Traceback (most recent call last):
+                    #File "D:\Desktop\EDX Courses\EDXnotes\squares.py", line 2, in <module>
+                    #print(f"The square of {i} is {square(i)}")
+                    #NameError: name 'square' is not defined
+            Alternative SYNTAX:
+            import functions / modules
+            Code written by other programmers that were written by other people
+            for i range(10):
+                print(f"The square of {i} is {functions.square(i)}")
+                
+                Defining a function       
+                #file from functions.py 
+                    def square(x): # defines the function
+                        return x * x   
 
 
+        h. Object Oriented Programming
+        Objects can store iformation, and execute programming
+
+            i. How to create a class in python
+            Class is a template for a type of object
+            SYNTAX
+            class Point():
+            def __init__(self, x, y):
+                self.x = x
+                self.y = y
+            # init function creates a point by storing 2 inputs insude an object
+            # A class is define by this magic method. 
+            # A function or method that will be automatically called once a new point is created
+            # functions that operate on objects are called methods, and must take 1st argument self
+            # represents the object that we are interacting with
+            #data is stored into the point
+            p = Point(2, 8)
+            print(p.x)
+            print(p.y)
+            #the statement will access the data stored in x
+
+            Output:
+            2
+            8
+            >>>
+
+            ii. Creating a class with an empty list
+            Example:
+            class Flight():
+            def __init__(self, capacity):
+                self.capacity = capacity
+                self.passenger = [] # stores self.passengers to an empty list
+
+            def add_passenger(self, name):
+                if not self.open_seats(): #if statement whenever  not seats are available
+                    return False
+                self.passenger.append(name)
+                return True
+                
+            
+            def open_seats(self):
+                return self.capacity - len(self.passenger)
+
+            flight = Flight(3)
+
+            people = ["Harry", "Ron", "Hermione", "Ginny"]
+            for person in people:
+                if flight.add_passenger(person):
+                    print(f"Added {person} to flight successfully.")
+                else:
+                    print(f"No available seat for that {person}")
+            
 
